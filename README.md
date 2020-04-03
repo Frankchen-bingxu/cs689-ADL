@@ -1,9 +1,21 @@
 # CS636 Deep Learning
-NAME:CHEN BINGXU UIN:329006933  
-Classify videos using  CNN(InceptionV3) 
+NAME:CHEN BINGXU UIN:329006933.  
+Classify videos using  C3D and Dense ResNet
 
+## topic
+detect crawling(baby) , I train the model on two dataset to test the accuracy and the process and how to test the video will show in the following.
 ## Requirements
-I run this project on jikeyun server so the process and results of code are shown in the jupyter notebook
+tensorflow
+opencv
+keras
 
-## Comment
-Hello teacher, I was a classmate who had taken a break with you before. After two weeks in bed, I spent a week studying and preparing this homework. The homework may not be done well, please forgive me.
+## The fold of the project
+I have train the model first, you don't need to train model anymore.In this project, open fold c3d, you can see three fold c3d,res3d. And the test videos are in video_test fold,the json files(contain time/label) are shown in the fold.  
+## How to run
+### 1 
+find the fold c3d/c3d
+### 2   
+run video_demp.py to test the video in the video_test fold(maybe you need to change the path if you want to change the video to test or test the video you provid). Also you can generate your own json file.
+
+## The video of how to run
+https://youtu.be/ayIpQWEYsms
