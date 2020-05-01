@@ -8,8 +8,8 @@ import argparse
 from keras.layers import Dense,Dropout,Conv3D,Input,MaxPool3D,Flatten,Activation
 from keras.regularizers import l2
 from keras.models import Model
-
-
+import os
+current_path = os.path.dirname(__file__)
 
 input_shape = (112,112,16,3)
 weight_decay = 0.005
@@ -46,7 +46,7 @@ x = Activation('softmax')(x)
 
 model = Model(inputs, x)
 
-with open('/Users/chenbingxu/PycharmProjects/c3d/ucfTrain/classInd.txt', 'r') as f:
+with open('./classInd.txt', 'r') as f:
     class_names = f.readlines()
     f.close()
 
@@ -56,9 +56,9 @@ lr = 0.005
 sgd = SGD(lr=lr, momentum=0.9, nesterov=True)
 model.compile(loss='categorical_crossentropy', optimizer=sgd, metrics=['accuracy'])
 model.summary()
-model.load_weights('/Users/chenbingxu/PycharmProjects/c3d/c3d/results/weights_c3d_101.h5', by_name=True)
+model.load_weights('./results/weights_c3d_101.h5', by_name=True)
 # read video
-video = '/Users/chenbingxu/PycharmProjects/c3d/video_test/8_actions.mp4'
+video = './8_actions.mp4'
 cap = cv2.VideoCapture(video)#read the frame of the video
 
 clip = []
