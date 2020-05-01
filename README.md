@@ -14,7 +14,7 @@ I have train the model first, you don't need to train model anymore.In this proj
 ## How to run
 use command to run
 ### 1
-cd c3d/c3d
+cd c3d/c3d.  
 python video_demo.py
 ### 2   
 run video_demp.py to test the video in the video_test fold(maybe you need to change the path if you want to change the video to test or test the video you provid). Also you can generate your own json file.
